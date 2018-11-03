@@ -1,0 +1,17 @@
+5d315280c5423890fa86ca2d7a2fa7d3 *DESCRIPTION
+5caf7e6a717c4412f33f25beedf95eb0 *NAMESPACE
+1cca81e34b17f492c4fe9c07560207bc *R/agtc.R
+1090d42338299d68f842d56b01bd069b *R/bedNA0.R
+68eff7dac2de4b195c3eb667c785241a *R/extractInfo.R
+877feb63e58372615dc0ef4f19a4ce12 *R/findPara.R
+7917c0a242b977164e26f6a1a80be79e *R/generateScore.R
+32d497cf8d509819f25b39ba5363b941 *R/getpara.R
+1b1780f1fb48c34f8a850dafb2c08f62 *R/packageEBPRS.R
+f7ef2127d9cb4acf38d358dcf1c9037e *R/printAUC.R
+3c6759e69cf875760959a7ce830797bf *R/snpEM.R
+2346829d9be6c8478a1ece6ef994b519 *R/validate.R
+e5c8598b68060f017df383a778431231 *man/EBPRSpackage.Rd
+62845d0bb653b79ddbb7e5e1b3c8ce6e *man/extractInfo.Rd
+adca964fa1c25369e9bd5d02e8205dab *man/findPara.Rd
+6343496321ecb5764001ec7cf7315957 *man/generateScore.Rd
+d9de3cebecdb94f28c0375894a1e0c83 *man/validate.Rd

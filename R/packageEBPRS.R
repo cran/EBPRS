@@ -1,0 +1,48 @@
+#' Extract information from raw data
+#'
+#' @description
+#' The first step of the algorithm, to clean the dataset and extract information from raw data.
+#' (Please notice that there are some requirements for the training and testing datasets.)
+#' @details
+#' EB-PRS is a novel method that leverages information for effect sizes across all the markers to improve the prediction accuracy.  No parameter tuning is needed in the method, and no external information is needed. This R-package provides the calculation of polygenic risk scores from the given training summary statistics and testing data. We can use EB-PRS to extract main information, estimate Empirical Bayes parameters, derive polygenic risk scores for  each individual in testing data, and evaluate the PRS according to AUC and predictive r2.
+#' \tabular{ll}{
+#' Package: \tab EBPRS\cr
+#' Type: \tab Package\cr
+#' Date: \tab 2018-10\cr
+#' }
+#'
+#' The package contains four main functions for users.
+#'
+#' 1. \code{extractInfo}. We use this to extract important information from training
+#' dataset and test dataset. There is a strict requirement for the format of imput, which is
+#' detailedly illustrated in details in \code{extractInfo}. Here we mention that
+#' the we recommend users first use package \code{plink2R} from github to read plink files into R,
+#' and the data transfered by \code{read_plink} from \code{plink2R} can be directly used as our input.
+#' A merge of training set and testing set will also be made.
+#'
+#'   \code{plink2R} can be installed using this command:
+#'
+#'    \code{options(unzip = "internal")}
+#'
+#'   \code{devtools::install_github("gabraham/plink2R/plink2R")}
+#'
+#' 2. \code{findPara}. We use this function to estimate parameters from the processed training set.
+#'
+#' 3. \code{generateScore}. This is the core function to generate polygenic risk score using our algorithm
+#' based on Empirical Bayes Theory.
+#'
+#' 4. \code{validate}. We use this to validate the performance of the PRS.
+#'
+#' @references
+#' Song, S., Jiang, W., Hou, L. and Zhao, H. Leveraging effect size distributions to improve polygenic risk scores derived from genome-wide association studies. \emph{Submitted}.
+#'
+#' @seealso
+#' \code{\link{extractInfo}}, \code{\link{findPara}}, \code{\link{generateScore}},
+#' \code{\link{validate}},
+#'
+#' \url{https://github.com/gabraham/plink2R}
+#' @author
+#' Shuang Song, Wei Jiang, Lin Hou and Hongyu Zhao
+#' @export
+
+EBPRSpackage <- function(){}

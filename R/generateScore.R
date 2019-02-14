@@ -26,14 +26,22 @@
 generateScore <- function(sigmaHat2, muHat,X){
   newmuHat=muHat/sqrt(sigmaHat2)
   n0=nrow(X)
-  S=rep(0,n0)
-  for(l in 1:n0){
-    S[l]=sum(X[l,]*newmuHat)
-    if(l%%500==0){
-      ll <- paste("Finished",l,"individuals")
-      print(ll)
+  if(is.null(n0)){
+    S <- sum(X*newmuHat)
+    return(S)
+  }
+  else{
+    S=rep(0,n0)
+    for(l in 1:n0){
+      S[l]=sum(X[l,]*newmuHat)
+      if(l%%500==0){
+        ll <- paste("Finished",l,"individuals")
+        print(ll)
+      }
+
     }
+    return(S)
 
   }
-  return(S)
+
 }

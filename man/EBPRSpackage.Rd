@@ -39,6 +39,9 @@ A merge of training set and testing set will also be made.
 based on Empirical Bayes Theory.
 
 4. \code{validate}. We use this to validate the performance of the PRS.
+
+5. \code{getEffectSize}. If the testing set is very large or \pkg{plink2R} cannot be installed,
+this function is recommended. We can use this function to generate the effect size with training set only.
 }
 \references{
 Song, S., Jiang, W., Hou, L. and Zhao, H. Leveraging effect size distributions to improve polygenic risk scores derived from genome-wide association studies. \emph{Submitted}.

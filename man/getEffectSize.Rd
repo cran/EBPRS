@@ -24,7 +24,7 @@ effect size.
 }
 \details{
 The raw training data should be a file with
-8 columns including CHROM, POS, A1, A2, BETA, P, SNP, N in order.
+8 columns including CHROM, POS, A1, A2, OR, P, SNP, N in order.
 The CHROM column should only be a number from 1 to 22. The SNP column
 is the rsid number.
 }

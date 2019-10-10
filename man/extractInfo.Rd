@@ -4,10 +4,10 @@
 \alias{extractInfo}
 \title{Extract information from raw data}
 \usage{
-extractInfo(trainpath, test)
+extractInfo(train, test)
 }
 \arguments{
-\item{trainpath}{train dataset path}
+\item{train}{train dataset}
 
 \item{test}{test dataset(list) including fam, bed, bim(generated from plink files, plink2R::read_plink is recommended)}
 }
@@ -21,8 +21,7 @@ The first step of the algorithm, to clean the dataset and extract information fr
 \details{
 The raw training data should be a file with
 8 columns including CHROM, POS, A1, A2, OR, P, SNP, N in order.
-The CHROM column should only be a number from 1 to 22. The SNP column
-is the rsid number.
+The CHROM column and the SNP column is used for indexing.
 
 "test" file can be generated from read_plink("test_plink_file")
 The raw testing data could be the files transformed from plink2R (using plink bfiles).

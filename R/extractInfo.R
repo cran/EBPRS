@@ -1,6 +1,6 @@
 #' Extract information from raw data
 #'
-#' @param trainpath train dataset path
+#' @param train train dataset
 #' @param test test dataset(list) including fam, bed, bim(generated from plink files, plink2R::read_plink is recommended)
 #' @return A list including processed training data (train) and testing data (bed, bim, fam)
 #' @description
@@ -10,8 +10,7 @@
 #' @details
 #' The raw training data should be a file with
 #' 8 columns including CHROM, POS, A1, A2, OR, P, SNP, N in order.
-#' The CHROM column should only be a number from 1 to 22. The SNP column
-#' is the rsid number.
+#' The CHROM column and the SNP column is used for indexing.
 #'
 #' "test" file can be generated from read_plink("test_plink_file")
 #' The raw testing data could be the files transformed from plink2R (using plink bfiles).
@@ -27,7 +26,7 @@
 
 
 
-extractInfo <- function(trainpath,test){
+extractInfo <- function(train,test){
   # if (!is.installed("plink2R")){
   #   options(unzip = "internal")
   #   devtools::install_github("gabraham/plink2R/plink2R")
@@ -35,10 +34,10 @@ extractInfo <- function(trainpath,test){
   # }
   #require("plink2R")
     #source("read_plink.R")
-  print1 <- paste("Reading the training data from",trainpath)
-  print(print1)
+  #print1 <- paste("Reading the training data from",trainpath)
+  #print(print1)
 
-  train <- fread(trainpath,header=T)
+  #train <- fread(trainpath,header=T)
   #print2 <- paste("Reading the testing data from",testpath)
   #print(print2)
   #devtools::install_github("gabraham/plink2R/plink2R")

@@ -4,10 +4,10 @@
 \alias{getEffectSize}
 \title{Generate effect size from training set}
 \usage{
-getEffectSize(trainpath, N1, N0)
+getEffectSize(train, N1, N0)
 }
 \arguments{
-\item{trainpath}{train dataset path}
+\item{train}{train dataset}
 
 \item{N1}{case number}
 
@@ -25,8 +25,14 @@ effect size.
 \details{
 The raw training data should be a file with
 8 columns including CHROM, POS, A1, A2, OR, P, SNP, N in order.
-The CHROM column should only be a number from 1 to 22. The SNP column
-is the rsid number.
+The CHROM column and the SNP column is used for indexing.
+}
+\examples{
+data("traindat")
+ \dontrun{
+ getEffectSize(traindat, N1=364, N0=2063)
+ }
+
 }
 \references{
 Song, S., Jiang, W., Hou, L. and Zhao, H. Leveraging effect size distributions to improve polygenic risk scores derived from genome-wide association studies. \emph{Submitted}.

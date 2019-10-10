@@ -1,6 +1,6 @@
 #' Generate effect size from training set
 #'
-#' @param trainpath train dataset path
+#' @param train train dataset
 #' @param N1 case number
 #' @param N0 control number
 #' @return The effect sizes for each SNP
@@ -13,8 +13,13 @@
 #' @details
 #' The raw training data should be a file with
 #' 8 columns including CHROM, POS, A1, A2, OR, P, SNP, N in order.
-#' The CHROM column should only be a number from 1 to 22. The SNP column
-#' is the rsid number.
+#' The CHROM column and the SNP column is used for indexing.
+#'
+#' @examples
+#' data("traindat")
+#'  \dontrun{
+#'  getEffectSize(traindat, N1=364, N0=2063)
+#'  }
 #'
 #' @references
 #' Song, S., Jiang, W., Hou, L. and Zhao, H. Leveraging effect size distributions to improve polygenic risk scores derived from genome-wide association studies. \emph{Submitted}.
@@ -22,9 +27,9 @@
 #' Shuang Song, Wei Jiang, Lin Hou and Hongyu Zhao
 #' @export
 
-getEffectSize <- function(trainpath,N1,N0){
+getEffectSize <- function(train,N1,N0){
 
-  train <- fread(trainpath,header=T)
+  #train <- fread(trainpath,header=T)
   #colnames(train)[1:7] <- c("chr","snpid","a1","a2","pos","or","p")
   print("Coordinating the ref alleles...")
   #a=train$a1

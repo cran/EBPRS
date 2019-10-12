@@ -21,7 +21,12 @@ The first step of the algorithm, to clean the dataset and extract information fr
 \details{
 The raw training data should be a file with
 8 columns including CHROM, POS, A1, A2, OR, P, SNP, N in order.
+
+N is the sample size.
+
 The CHROM column and the SNP column is used for indexing.
+
+An example training dataset can be acquired using data("traindat")
 
 "test" file can be generated from read_plink("test_plink_file")
 The raw testing data could be the files transformed from plink2R (using plink bfiles).

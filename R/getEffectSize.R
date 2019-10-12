@@ -9,7 +9,8 @@
 #' that testing data is very large and hard to be loaded into R. The effect size
 #' will be generated directly. Users can calculate scores in plink with the generated
 #' effect size.
-#' @import data.table
+#'
+#' An example training dataset can be acquired using data("traindat")
 #' @details
 #' The raw training data should be a file with
 #' 8 columns including CHROM, POS, A1, A2, OR, P, SNP, N in order.

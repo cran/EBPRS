@@ -1,4 +1,3 @@
-
 getpara <- function(n0,n1,SE,beta,pval,pi0Hat,sigma02){
   n <- n0+n1
   m <- length(pval)

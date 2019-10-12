@@ -42,6 +42,8 @@ based on Empirical Bayes Theory.
 
 5. \code{getEffectSize}. If the testing set is very large or \pkg{plink2R} cannot be installed,
 this function is recommended. We can use this function to generate the effect size with training set only.
+
+5. \code{data("traindat")} for the example training dataset.
 }
 \references{
 Song, S., Jiang, W., Hou, L. and Zhao, H. Leveraging effect size distributions to improve polygenic risk scores derived from genome-wide association studies. \emph{Submitted}.

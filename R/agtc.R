@@ -1,4 +1,3 @@
-
 agtc <- function(a,b){
   sig <- rep(1,length(a))
   diff <- which(a!=b)

@@ -6,11 +6,15 @@
 #' @description
 #' The first step of the algorithm, to clean the dataset and extract information from raw data.
 #' (Please notice that there are some requirements for the training and testing datasets.)
-#' @import data.table
 #' @details
 #' The raw training data should be a file with
 #' 8 columns including CHROM, POS, A1, A2, OR, P, SNP, N in order.
+#'
+#' N is the sample size.
+#'
 #' The CHROM column and the SNP column is used for indexing.
+#'
+#' An example training dataset can be acquired using data("traindat")
 #'
 #' "test" file can be generated from read_plink("test_plink_file")
 #' The raw testing data could be the files transformed from plink2R (using plink bfiles).
@@ -43,7 +47,7 @@ extractInfo <- function(train,test){
   #devtools::install_github("gabraham/plink2R/plink2R")
   #test <- read_plink(testpath)
   print("Merging the data...")
-  trainindex <- data.frame(snp=train[,2],indextrain=1:nrow(train))
+  trainindex <- data.frame(snp=train$SNP,indextrain=1:nrow(train))
   testindex <- data.frame(snp=test$bim[,2],indextest=1:nrow(test$bim))
   colnames(trainindex)[1] <- "snp"
   colnames(testindex)[1] <- "snp"

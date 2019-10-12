@@ -1,5 +1,4 @@
-
-bedNA0 <- function(bed1){
+bedNA0<- function(bed1){
   for(j in 1:ncol(bed1)){
     temp <- bed1[,j]
     temp[is.na(temp)] <- 0

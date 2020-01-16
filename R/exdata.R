@@ -7,7 +7,7 @@
 #'
 #' @usage data("traindat")
 #'
-#' @format An object of class \code{"cross"}; see \code{\link[qtl]{read.cross}}.
+#' @format data.frame
 #'
 #' @keywords datasets
 #'
@@ -18,6 +18,5 @@
 #' @examples
 #' data("traindat")
 #'  \dontrun{
-#'  getEffectSize(traindat, N1=364, N0=2063)
-#'  }
+#'  result=EBPRS(train=traindat, N1=364, N0=2063)}
 "traindat"

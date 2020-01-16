@@ -4,7 +4,7 @@
 \name{traindat}
 \alias{traindat}
 \title{Example data for training set}
-\format{An object of class \code{"cross"}; see \code{\link[qtl]{read.cross}}.}
+\format{data.frame}
 \usage{
 data("traindat")
 }
@@ -14,8 +14,7 @@ Summary statistics simulated in the manuscript Leveraging effect size distributi
 \examples{
 data("traindat")
  \dontrun{
- getEffectSize(traindat, N1=364, N0=2063)
- }
+ result=EBPRS(train=traindat, N1=364, N0=2063)}
 }
 \references{
 Song, S., Jiang, W., Hou, L. and Zhao, H. Leveraging effect size distributions to improve polygenic risk scores derived from genome-wide association studies. \emph{Submitted}.

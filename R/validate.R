@@ -6,7 +6,7 @@
 #' @description
 #' Provide the performance evaluated by predictive r2 and AUC.
 #' @references
-#' Song, S., Jiang, W., Hou, L. and Zhao, H. (2019). Leveraging effect size distributions to improve polygenic risk scores derived from genome-wide association studies. \emph{PLoS Compuational Biology}.
+#' Song S, Jiang W, Hou L, Zhao H (2020) Leveraging effect size distributions to improve polygenic risk scores derived from summary statistics of genome-wide association studies. PLoS Comput Biol 16(2): e1007565. https://doi.org/10.1371/journal.pcbi.1007565
 #' @examples
 #' validate(score=rnorm(20,0,1), truey=sample(0:1,20,replace=TRUE))
 #' @seealso
@@ -28,7 +28,7 @@ validate <- function(score,truey){
   }else if(length(table(score))==2){
     auc <- printAUC(truey,score)
     r2 <- cor(score,truey)^2
-    cat("Please check the order of truey and score.")
+    cat("Please check the order of truey and score. \n")
     cat("The R2 equals to ",r2,"\n")
     cat("The AUC equals to",auc,"\n")
     return(list(r2=r2,AUC=auc))

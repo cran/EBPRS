@@ -7,7 +7,7 @@
 EBPRSpackage()
 }
 \description{
-Description of the package. This is the 2.0.1 version.
+Description of the package. This is the 2.0.3 version.
 }
 \details{
 EB-PRS is a novel method that leverages information for effect sizes across all the markers to improve the prediction accuracy.  No parameter tuning is needed in the method, and no external information is needed. This R-package provides the calculation of polygenic risk scores from the given training summary statistics and test data. We can use EB-PRS to extract main information, estimate Empirical Bayes parameters, derive polygenic risk scores for  each individual in test data, and evaluate the PRS according to AUC and predictive r2.
@@ -58,7 +58,7 @@ or
 result <- EBPRS(train=traindat, N1, N0)
 }
 \references{
-Song, S., Jiang, W., Hou, L. and Zhao, H. (2019). Leveraging effect size distributions to improve polygenic risk scores derived from genome-wide association studies. \emph{PLoS Compuational Biology}.
+Song S, Jiang W, Hou L, Zhao H (2020) Leveraging effect size distributions to improve polygenic risk scores derived from summary statistics of genome-wide association studies. PLoS Comput Biol 16(2): e1007565. https://doi.org/10.1371/journal.pcbi.1007565
 }
 \seealso{
 \code{\link{EBPRS}},

@@ -18,7 +18,7 @@ Provide the performance evaluated by predictive r2 and AUC.
 validate(score=rnorm(20,0,1), truey=sample(0:1,20,replace=TRUE))
 }
 \references{
-Song, S., Jiang, W., Hou, L. and Zhao, H. (2019). Leveraging effect size distributions to improve polygenic risk scores derived from genome-wide association studies. \emph{PLoS Compuational Biology}.
+Song S, Jiang W, Hou L, Zhao H (2020) Leveraging effect size distributions to improve polygenic risk scores derived from summary statistics of genome-wide association studies. PLoS Comput Biol 16(2): e1007565. https://doi.org/10.1371/journal.pcbi.1007565
 }
 \seealso{
 \code{\link{EBPRS}}

@@ -30,6 +30,14 @@ estimated sigma2 (sigmaHat2)
 estimated proportion of non-associated SNPs (pi0)
 
 estimated variance of effect sizes of associated SNPs (sigma02)
+
+If the test file is provided the results also include:
+
+predictive r2 (r2)
+
+AUC (AUC)
+
+estimated polygenic risk score (S)
 }
 \description{
 Clean the dataset, extract information from raw data and calculate effect sizes.

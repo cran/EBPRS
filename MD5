@@ -1,9 +1,9 @@
-2f33816aa20734f42cf8783b10e591d8 *DESCRIPTION
+4e5ab7036d417d2e49f9cb2a184e0b62 *DESCRIPTION
 435c0b5631755258c555e6dbd4bbe3cf *NAMESPACE
 4c41e858f0e33abc250f7b81210443d0 *R/agtc.R
 354911eb776ca42414236cdec4adb41a *R/exdata.R
 b4cdef027bb9f45f75f17ce697d7d432 *R/extractInfo.R
-fb7966c3ae4cebf5afeb9ddb2688b05d *R/findPara.R
+862ba6206f9ff68ced481a6e72d3e647 *R/findPara.R
 fd6e13c88dd689409189a4cc287fcbdb *R/findpara_ltdr.R
 a26afcc9b23211f09194ad54984c64e9 *R/generateScore.R
 ca7fb39ff2022d09189843188222ed4a *R/packageEBPRS.R
@@ -12,7 +12,7 @@ ebad8b43958ba9a37b9a290c9d340e23 *R/snpEM.R
 6d5f6b5b1f2c2a7493cf4b87ce7f7510 *R/snpEMrobust.R
 065631af773f5a16b5691ebd3db08491 *R/validate.R
 d21ebd873fb2ba74ea3afe750c6f71aa *data/traindat.RData
-7b3036e045ae61e0ed45a4d0a2691a96 *man/EBPRS.Rd
+5c0d4158efc220e3a55d96d570cc4155 *man/EBPRS.Rd
 9a1e7e86df5f3715173c2f683fe33ebc *man/EBPRSpackage.Rd
 a3b6e7db933b1a6d6a9fd65c506e1d6c *man/traindat.Rd
 eca0f11167844050c2581beda9151fcb *man/validate.Rd

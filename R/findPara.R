@@ -17,6 +17,15 @@
 #' estimated proportion of non-associated SNPs (pi0)
 #'
 #' estimated variance of effect sizes of associated SNPs (sigma02)
+#'
+#' If the test file is provided the results also include:
+#'
+#' predictive r2 (r2)
+#'
+#' AUC (AUC)
+#'
+#' estimated polygenic risk score (S)
+#'
 #' @description
 #' Clean the dataset, extract information from raw data and calculate effect sizes.
 #' (Please notice that there are some requirements for the training and testing datasets.)
@@ -70,6 +79,7 @@ EBPRS <- function(train,test,N1,N0,robust=F){
     # b=bim[,5]
     sig=agtc(train$A1,train$A2,bim[,5],bim[,6])
     train$OR=(train$OR)^sig
+    train <- train[train$OR>0,]
   }
     z <- -qnorm(train$P/2)*sign(log(train$OR))
     se <- log(train$OR)/z
@@ -92,8 +102,8 @@ EBPRS <- function(train,test,N1,N0,robust=F){
     if(missing(test)==F){
       cat("Now calculating scores \n")
       S <- generateScore(muHatnew, temp0$bed)
-      validate(S, test$fam[,6])
-      return(list(result=result,S=S,muHat=res$muHat,sigmaHat2=res$sigmaHat2,pi0=temp$pi0,sigma02=temp$sigma02,eff=muHatnew))
+      tt <- validate(S, test$fam[,6])
+      return(list(result=result,S=S,r2=tt$r2,AUC=tt$AUC,muHat=res$muHat,sigmaHat2=res$sigmaHat2,pi0=temp$pi0,sigma02=temp$sigma02,eff=muHatnew))
     }
     else{
       return(list(result=result,muHat=res$muHat,sigmaHat2=res$sigmaHat2,pi0=temp$pi0,sigma02=temp$sigma02,eff=muHatnew))

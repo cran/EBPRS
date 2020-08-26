@@ -4,18 +4,18 @@
 \alias{EBPRS}
 \title{Main function}
 \usage{
-EBPRS(train, test, N1, N0, robust = F)
+EBPRS(train, test, N1, N0, robust = T)
 }
 \arguments{
 \item{train}{training dataset}
 
-\item{test}{testing dataset (list) including fam, bed, bim (generated from plink files, plink2R::read_plink is recommended). If missing(test)=T, the function will use all SNPs in training dataset by default.}
+\item{test}{testing dataset (list) including fam, bed, bim, which can be generated from function read_plink in our package. If missing(test)=T, the function will use all SNPs in training dataset by default.}
 
 \item{N1}{case number}
 
 \item{N0}{control number}
 
-\item{robust}{T/F, indicator that whether robust estimation is needed.}
+\item{robust}{T/F, indicator that whether robust estimation is needed. The function will run faster when robust is set to F. The default is T.}
 }
 \value{
 A list containing
@@ -52,8 +52,7 @@ The SNP column (rsid) is used for indexing.
 
 An example training dataset can be acquired using data("traindat")
 
-"test" file can be generated from read_plink("test_plink_file")
-The raw testing data could be the files transformed from plink2R (using plink bfiles).
+"test" file can be generated from read_plink("path_to_test_plink_bfile")
 
 test is a list, which has test$fam (6 columns with information on samples), test$bim (6 columns with information on SNPs), test$bed (genotypes matrix 0, 1, 2)
 
@@ -65,9 +64,6 @@ derive the best parameter for robust estimation, while more time is needed.
 }
 \references{
 Song S, Jiang W, Hou L, Zhao H (2020) Leveraging effect size distributions to improve polygenic risk scores derived from summary statistics of genome-wide association studies. PLoS Comput Biol 16(2): e1007565. https://doi.org/10.1371/journal.pcbi.1007565
-}
-\seealso{
-\url{https://github.com/gabraham/plink2R}
 }
 \author{
 Shuang Song, Wei Jiang, Lin Hou and Hongyu Zhao

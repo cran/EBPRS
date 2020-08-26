@@ -2,8 +2,11 @@
 
 export(EBPRS)
 export(EBPRSpackage)
+export(read_plink)
 export(validate)
+import(BEDMatrix)
 import(ROCR)
+import(data.table)
 import(methods)
 import(stats)
 importFrom(utils,write.table)
